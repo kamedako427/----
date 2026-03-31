@@ -1,0 +1,171 @@
+ body {
+      margin: 0;
+    }
+
+    /* ヘッダー */
+    header {
+      position: fixed;   /* ← 常に上に固定 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #f5e028;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      gap: 5px;
+    }
+    
+    .big {
+      display: flex;
+      align-items: center;
+    }
+    
+    .big h1 {  
+      margin: 0;
+      color: #f27013;
+      white-space: nowrap;
+      font-size: 26px;
+    }
+    
+    header h2 {
+      margin: 0;
+      white-space: nowrap;
+      font-size: 24px;
+    }
+    
+    header h1 {
+      margin: 0;
+      white-space: nowrap;
+      font-size: 26px;
+    }
+    img{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+header .headerbutton{
+    margin-left: auto;
+    margin-right: 12px;
+    background-color: lightseagreen;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.contact{
+    width: 100%;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+   
+.contact .contact-button{
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: rgb(251, 67, 67);
+        padding: 13px 30px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+        transition: all 0.3s;
+}
+.contact-button h2{
+    display: flex;
+    margin: 0;
+    white-space: nowrap;
+    color: white;
+}
+    
+.contact .contact-button:hover{
+        background-color: transparent;
+        border:2px solid green;
+        cursor: pointer;
+}
+
+   
+*{
+    color: rgb(0, 0, 0);
+}
+
+#wrap{
+    margin-top: 80px; /* ヘッダーの高さ分ずらす */
+    padding: 20px;
+    width:800px;
+    background-color:azure;
+    margin:50px auto 20px;
+
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+    
+    .big h1 {
+        flex: 0 0 auto;
+        font-size: 18px;
+    }
+    
+    header h2 {
+        flex: 0 0 auto;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    
+    header h1 {
+        flex: 0 0 auto;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    header .headerbutton {
+        margin-left: auto;
+        margin-top: 8px;
+        padding: 8px 15px;
+        font-size: 12px;
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    
+    img {
+        margin-top: 80px;
+    }
+    
+    .contact .contact-button {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    #wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 50px auto 20px;
+    }
+}
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>コンケン</title>
+        <style type="text/css">
+          body {
+      margin: 0;
+      background-image: url('./img/background.png');
+        background-size: cover;
+    }
+
+    /* ヘッダー */
+    header {
+      position: fixed;   /* ← 常に上に固定 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #8bbdfe;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      gap: 5px;
+    }
+    
+    .big {
+      display: flex;
+      align-items: center;
+    }
+    
+    .big h1 {  
+      margin: 0;
+      color: #f27013;
+      white-space: nowrap;
+      font-size: 26px;
+    }
+    
+    header h2 {
+      margin: 0;
+      white-space: nowrap;
+      font-size: 24px;
+    }
+    
+    header h1 {
+      margin: 0;
+      white-space: nowrap;
+      font-size: 26px;
+    }
+    img{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+header .headerbutton{
+    margin-left: auto;
+    margin-right: 30px;
+    background-color: lightseagreen;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.contact{
+    width: 100%;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+   
+.contact .contact-button{
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgb(251, 67, 67);
+        padding: 13px 30px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+        transition: all 0.3s;
+}
+.contact-button h2{
+    display: flex;
+    margin: 0;
+    white-space: nowrap;
+    color: white;
+}
+    
+.contact .contact-button:hover{
+        background-color: rgb(155, 4, 4);
+        cursor: pointer;
+}
+
+   
+*{
+    color: rgb(0, 0, 0);
+}
+
+#wrap{
+    margin-top: 80px; /* ヘッダーの高さ分ずらす */
+    padding: 20px;
+    width:800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin:50px auto 20px;
+
+}
+#wrap h1{
+     white-space: nowrap;
+}
+.profile{
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.advertisement{
+    img{
+        width: 500px;
+        height: auto;
+        max-height: 1000px;
+        margin: 20px 150px auto;
+    }
+}   
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+    
+    .big h1 {
+        flex: 0 0 auto;
+        font-size: 18px;
+    }
+    
+    header h2 {
+        flex: 0 0 auto;
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    
+    header h1 {
+        flex: 0 0 auto;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    header .headerbutton {
+        margin-left: auto;
+        margin-top: 8px;
+        padding: 8px 15px;
+        font-size: 12px;
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    
+    img {
+        margin-top: 80px;
+    }
+    
+    .contact .contact-button {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    #wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 50px auto 20px;
+    }
+}
+
+
+        </style>
+        <link rel="icon" href="aa-2.png">
+    </head>
+    <body>
+        <header>
+            <h1>あなただけに教える投資の</h1>
+            <div class ="big">
+                <h1>裏ワザ</h1>
+            </div>
+            <button class="headerbutton" type="button">友だち追加はここから</button>
+            
+        </header>
+        <img src="./img/profile.jpg" alt="プロフィール画像">
+        <div id="wrap">
+            <div class="contact">
+        <a href="#" class="contact-button"><h2>LINEで友だち追加して今すぐ受講</h2></a>
+            </div>
+            <div class = "advertisement">
+            <img src="./img/advertisement.jpg" alt="広告画像">
+            </div>
+            <h1>【投資のプロ達だけが知っている資産形成法を初公開】</h1>
+            <p>いま、一部のプロ投資家の間で密かで実践されている資産形成法を今回特別に公開します！</p>
+            <p>監修は今資産家たちの間で話題の投資家Sさんです！</p>
+            <h2>【期間限定・完全無料】</h2>
+            <h3>✅投資初心者OK</h3>
+            <h3>✅今回限りの特別枠を解放</h3>
+            <h3>✅120名限定</h3>
+            <h3>【今回の資産形成メソッドについて】</h3>
+            <p>このプログラムでは、独自の「分散型資産最適化ロジック」をベースに、マーケットの歪みを活用したポジショニングを行います。従来の投資とは異なり、「タイミング」ではなく「構造」に着目することで、安定的な成果を実現します。さらに、独自開発された「デュエルインカム設計」により、リスクとリターンのバランスを最適化しています。これにより、再現性の高いキャッシュフローの構築が可能になります。</p>
+            <p>詳細はセミナー内でのみ公開しています。</p>
+            <p>すでに多くの方に申し込みいただき、残り枠はあとわずかとなっております。</p>
+            <p>受講するかどうかであなたの未来が大きく変わります。</p>
+            <h2>【講師プロフィール】</h2>
+            <div class = "profile">
+                <img src="./img/icon.jpg" alt="アイコン画像">
+                <p>国内外のマーケットに精通し、これまで複数の資産運用プロジェクトに関与してきた実績を持つ。独自の投資理論を体系化し、延べ1,000名以上に対して資産形成のアドバイスを提供。20代で経済的自由を実現し、現在は次世代の投資家育成に注力している。これまで手がけた案件は多岐にわたり、安定した成果を継続的に生み出しているとされている。現在は限られた参加者にのみ、そのノウハウを直接伝える活動を行っている。</p>
+            </div>
+
+            
+
+          
+           
+        </div>
+    </body>
+</html>
