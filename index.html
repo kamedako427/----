@@ -126,23 +126,21 @@ header .headerbutton{
 
 }
 .profile{
-    img{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-    }
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.advertisement{
-    img{
-        width: 500px;
-        height: auto;
-        max-height: 1000px;
-        margin: 20px 150px auto;
-    }
-}   
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.advertisement img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
 
 /* モバイル対応 */
 @media (max-width: 768px) {
