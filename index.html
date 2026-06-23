@@ -14,46 +14,38 @@
 
 /* ------------------ ヘッダー ------------------ */
 
-header {
+header { 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #8bbdfe;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
+    background-color: #8bbdfe; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white; 
     display: flex;
     align-items: center;
-
     padding: 0 20px;
-    gap: 5px;
-
-    color: white;
-    z-index: 1000;
-}
-
-header h1,
-header h2{
-    margin:0;
-    white-space: nowrap;
-}
-
-header h1{
-    font-size:26px;
-}
-
-header h2{
-    font-size:24px;
-}
-
-.big{
-    display:flex;
-    align-items:center;
-}
-
-.big h1{
-    color:#f27013;
+    z-index: 1000; gap: 5px; 
+} 
+.big { 
+    display: flex;
+    align-items: center; 
+} 
+.big h1 {
+    margin: 0; 
+    color: #f27013; 
+    white-space: nowrap; 
+    font-size: 26px; 
+} header h2 { 
+    margin: 0; 
+    white-space: nowrap; 
+    font-size: 24px;
+} 
+header h1 { 
+    margin: 0; 
+    white-space: nowrap; 
+    font-size: 26px; 
 }
 
 .headerbutton{
@@ -266,29 +258,23 @@ img{
 
 @media (max-width:768px){
 
-header{
-
-    height:auto;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    padding:10px;
+header { 
+    height: auto; 
+    flex-wrap: wrap; 
+    padding: 10px 15px; 
+} 
+.big h1 {
+    flex: 0 0 auto; 
+    font-size: 18px; 
+} header h2 { 
+    flex: 0 0 auto; 
+    font-size: 16px; 
+    margin: 0 5px; 
+} header h1 { 
+    flex: 0 0 auto; 
+    font-size: 18px; 
+    margin: 0 5px; 
 }
-
-header h1{
-
-    font-size:20px;
-
-    text-align:center;
-}
-
-.big h1{
-
-    font-size:24px;
-}
-
 .headerbutton{
 
     margin:10px 0 0 0;
@@ -299,18 +285,13 @@ header h1{
 }
 
 .speech-bubble{
-
     position:static;
-
     margin-top:10px;
 
-    animation:none;
+    animation:blink 1.2s infinite;
 }
 
-.speech-bubble::after{
 
-    display:none;
-}
 
 img{
 
@@ -348,18 +329,11 @@ img{
         <header>
 
     <h1>あなただけに教える投資の</h1>
-
-    <div class="big">
-        <h1>裏ワザ</h1>
-    </div>
-
-    <a href="#" class="headerbutton">
-        LINEで友だち追加して今すぐ受講
-    </a>
-
-    <div class="speech-bubble">
-        投資詐欺体験は、ここをタップ！
-    </div>
+    <div class ="big"> 
+        <h1>裏ワザ</h1> 
+    </div> 
+    <a href="#" class="headerbutton">LINEで友だち追加して今すぐ受講</a> 
+    <div class="speech-bubble">⬆️投資詐欺体験は上をタップ!</div>
 
 </header>
 
