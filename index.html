@@ -6,236 +6,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>コンケン</title>
         <style type="text/css">
-          body {
-      margin: 0;
-      background-image: url('./img/background.png');
-        background-size: cover;
-    }
+         body {
+    margin: 0;
+    background-image: url('./img/background.png');
+    background-size: cover;
+}
 
-    /* ヘッダー */
-    header {
-      position: fixed;   /* ← 常に上に固定 */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #8bbdfe;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      z-index: 1000;
-      gap: 5px;
-    }
-    
-    .big {
-      display: flex;
-      align-items: center;
-    }
-    
-    .big h1 {  
-      margin: 0;
-      color: #f27013;
-      white-space: nowrap;
-      font-size: 26px;
-    }
-    
-    header h2 {
-      margin: 0;
-      white-space: nowrap;
-      font-size: 24px;
-    }
-    
-    header h1 {
-      margin: 0;
-      white-space: nowrap;
-      font-size: 26px;
-    }
-    img{
-    margin-top: 60px;
+/* ------------------ ヘッダー ------------------ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
+    height: 60px;
+    background-color: #8bbdfe;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+    gap: 5px;
+
+    color: white;
+    z-index: 1000;
 }
 
-header .headerbutton{
-    margin-left: auto;
-    margin-right: 30px;
-    background-color: lightseagreen;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: all 0.3s;
+header h1,
+header h2{
+    margin:0;
     white-space: nowrap;
-    border: none;
-    cursor: pointer;
 }
+
+header h1{
+    font-size:26px;
+}
+
+header h2{
+    font-size:24px;
+}
+
+.big{
+    display:flex;
+    align-items:center;
+}
+
+.big h1{
+    color:#f27013;
+}
+
+.headerbutton{
+    margin-left:auto;
+    margin-right:30px;
+
+    background:lightseagreen;
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+    transition:.3s;
+
+    border:none;
+    cursor:pointer;
+}
+
+.headerbutton:hover{
+    background:#178f87;
+}
+
+img{
+    margin-top:60px;
+    width:100%;
+    height:auto;
+    max-height:600px;
+    object-fit:cover;
+}
+
+/* ------------------ 吹き出し ------------------ */
 
 .speech-bubble{
-    position: fixed;
-    top: 70px;
-    right: 80px;
-    max-width: 240px;
-    padding: 12px 14px;
-    background: #ffffff;
-    color: #000000;
-    border: 3px solid #f27013;
-    border-radius: 24px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-    animation: blink 1.2s ease-in-out infinite;
-    z-index: 1001;
+
+    position:fixed;
+
+    top:70px;
+    right:80px;
+
+    max-width:240px;
+
+    padding:12px 14px;
+
+    background:white;
+
+    border:3px solid #f27013;
+
+    border-radius:24px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    box-shadow:0 6px 14px rgba(0,0,0,.18);
+
+    animation:blink 1.2s infinite;
+
+    z-index:1001;
 }
 
 .speech-bubble::after{
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    right: 16px;
-    border-width: 0 8px 10px 8px;
-    border-style: solid;
-    border-color: transparent transparent #f27013 transparent;
+
+    content:"";
+
+    position:absolute;
+
+    bottom:100%;
+
+    right:16px;
+
+    border-width:0 8px 10px 8px;
+
+    border-style:solid;
+
+    border-color:transparent transparent #f27013 transparent;
 }
 
 @keyframes blink{
-    0%, 100%{ opacity: 1; }
-    50%{ opacity: 0.3; }
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.3;
+
+    }
+
 }
+
+/* ------------------ 問い合わせ ------------------ */
 
 .contact{
-    width: 100%;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-   
-.contact .contact-button{
-        width: 90%;
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: rgb(251, 67, 67);
-        padding: 13px 30px;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 30px;
-        transition: all 0.3s;
-}
-.contact-button h2{
-    display: flex;
-    margin: 0;
-    white-space: nowrap;
-    color: white;
-}
-    
-.contact .contact-button:hover{
-        background-color: rgb(155, 4, 4);
-        cursor: pointer;
+
+    width:100%;
+
+    height:290px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
 }
 
-   
+.contact-button{
+
+    width:90%;
+
+    max-width:500px;
+
+    background:rgb(251,67,67);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:13px 30px;
+
+    transition:.3s;
+}
+
+.contact-button:hover{
+
+    background:rgb(155,4,4);
+}
+
+.contact-button h2{
+
+    color:white;
+
+    margin:0;
+}
+
+/* ------------------ 本文 ------------------ */
+
 *{
-    color: rgb(0, 0, 0);
+
+    color:black;
 }
 
 #wrap{
-    margin-top: 80px; /* ヘッダーの高さ分ずらす */
-    padding: 20px;
+
     width:800px;
-    background-color: rgba(255, 255, 255, 0.5);
+
     margin:50px auto 20px;
 
-}
-.profile{
-    img{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-    }
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.advertisement{
-    img{
-        display: block;
-        width: 500px;
-        height: auto;
-        max-width: 100%;
-        max-height: 1000px;
-        margin: 20px auto;
+    margin-top:80px;
 
-/* モバイル対応 */
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        flex-wrap: wrap;
-        padding: 10px 15px;
-    }
-    
-    header h1 {
-        flex: 0 0 auto;
-        font-size: 16px;
-        margin: 0 3px;
-        white-space: normal;
-    }
-    
-    .big {
-        flex: 0 0 100%;
-        justify-content: flex-start;
-    }
-    
-    .big h1 {
-        flex: 0 0 auto;
-        font-size: 16px;
-        white-space: normal;
-    }
-    
-    header h2 {
-        flex: 0 0 auto;
-        font-size: 16px;
-        margin: 0 5px;
-    }
-    
-    header .headerbutton {
-        flex: 0 0 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 8px;
-        padding: 10px 15px;
-        font-size: 13px;
-        width: 100%;
-        text-align: center;
-    }
-    
-    img {
-        margin-top: 80px;
-    }
-    
-    .contact .contact-button {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    #wrap {
-        width: 100%;
-        max-width: 100%;
-        margin: 50px auto 20px;
-    }
+    padding:20px;
+
+    background:rgba(255,255,255,.5);
+}
+
+/* ------------------ プロフィール ------------------ */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.profile img{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    margin-top:0;
+}
+
+/* ------------------ 広告 ------------------ */
+
+.advertisement img{
+
+    display:block;
+
+    width:500px;
+
+    max-width:100%;
+
+    height:auto;
+
+    margin:20px auto;
+}
+
+/* ------------------ スマホ ------------------ */
+
+@media (max-width:768px){
+
+header{
+
+    height:auto;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:10px;
+}
+
+header h1{
+
+    font-size:20px;
+
+    text-align:center;
+}
+
+.big h1{
+
+    font-size:24px;
+}
+
+.headerbutton{
+
+    margin:10px 0 0 0;
+
+    width:90%;
+
+    text-align:center;
+}
+
+.speech-bubble{
+
+    position:static;
+
+    margin-top:10px;
+
+    animation:none;
+}
+
+.speech-bubble::after{
+
+    display:none;
+}
+
+img{
+
+    margin-top:160px;
+}
+
+#wrap{
+
+    width:95%;
+
+    padding:15px;
+
+    box-sizing:border-box;
+}
+
+.profile{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+.profile img{
+
+    margin-bottom:10px;
+}
+
 }
 
 
@@ -244,42 +346,87 @@ header .headerbutton{
     </head>
     <body>
         <header>
-            <h1>あなただけに教える投資の</h1>
-            <div class ="big">
-                <h1>裏ワザ</h1>
-            </div>
-            <a href="#" class="headerbutton">LINEで友だち追加して今すぐ受講</a>
-            <div class="speech-bubble">投資詐欺体験は、ここをタップ!</div>
-        </header>
-        <img src="./img/profile.jpg" alt="プロフィール画像">
-        <div id="wrap">
-            <div class="contact">
-            </div>
-            <div class = "advertisement">
-            <img src="./img/advertisement.jpg" alt="広告画像">
-            </div>
-            <h1>【投資のプロ達だけが知っている資産形成法を初公開】</h1>
-            <p>いま、一部のプロ投資家の間で密かで実践されている資産形成法を今回特別に公開します！</p>
-            <p>監修は今資産家たちの間で話題の投資家Sさんです！</p>
-            <h2>【期間限定・完全無料】</h2>
-            <h3>✅投資初心者OK</h3>
-            <h3>✅今回限りの特別枠を解放</h3>
-            <h3>✅120名限定</h3>
-            <h3>【今回の資産形成メソッドについて】</h3>
-            <p>このプログラムでは、独自の「分散型資産最適化ロジック」をベースに、マーケットの歪みを活用したポジショニングを行います。従来の投資とは異なり、「タイミング」ではなく「構造」に着目することで、安定的な成果を実現します。さらに、独自開発された「デュエルインカム設計」により、リスクとリターンのバランスを最適化しています。これにより、再現性の高いキャッシュフローの構築が可能になります。</p>
-            <p>詳細はセミナー内でのみ公開しています。</p>
-            <p>すでに多くの方に申し込みいただき、残り枠はあとわずかとなっております。</p>
-            <p>受講するかどうかであなたの未来が大きく変わります。</p>
-            <h2>【講師プロフィール】</h2>
-            <div class = "profile">
-                <img src="./img/icon.jpg" alt="アイコン画像">
-                <p>国内外のマーケットに精通し、これまで複数の資産運用プロジェクトに関与してきた実績を持つ。独自の投資理論を体系化し、延べ1,000名以上に対して資産形成のアドバイスを提供。20代で経済的自由を実現し、現在は次世代の投資家育成に注力している。これまで手がけた案件は多岐にわたり、安定した成果を継続的に生み出しているとされている。現在は限られた参加者にのみ、そのノウハウを直接伝える活動を行っている。</p>
-            </div>
 
-            
+    <h1>あなただけに教える投資の</h1>
 
-          
-           
-        </div>
+    <div class="big">
+        <h1>裏ワザ</h1>
+    </div>
+
+    <a href="#" class="headerbutton">
+        LINEで友だち追加して今すぐ受講
+    </a>
+
+    <div class="speech-bubble">
+        投資詐欺体験は、ここをタップ！
+    </div>
+
+</header>
+
+<img src="./img/profile.jpg" alt="プロフィール画像">
+
+<div id="wrap">
+
+    <div class="contact">
+    </div>
+
+    <div class="advertisement">
+        <img src="./img/advertisement.jpg" alt="広告画像">
+    </div>
+
+    <h1>【投資のプロ達だけが知っている資産形成法を初公開】</h1>
+
+    <p>いま、一部のプロ投資家の間で密かで実践されている資産形成法を今回特別に公開します！</p>
+
+    <p>監修は今資産家たちの間で話題の投資家Sさんです！</p>
+
+    <h2>【期間限定・完全無料】</h2>
+
+    <h3>✅投資初心者OK</h3>
+
+    <h3>✅今回限りの特別枠を解放</h3>
+
+    <h3>✅120名限定</h3>
+
+    <h3>【今回の資産形成メソッドについて】</h3>
+
+    <p>
+        このプログラムでは、独自の「分散型資産最適化ロジック」をベースに、
+        マーケットの歪みを活用したポジショニングを行います。
+        従来の投資とは異なり、「タイミング」ではなく「構造」に着目することで、
+        安定的な成果を実現します。
+        さらに、独自開発された「デュエルインカム設計」により、
+        リスクとリターンのバランスを最適化しています。
+        これにより、再現性の高いキャッシュフローの構築が可能になります。
+    </p>
+
+    <p>詳細はセミナー内でのみ公開しています。</p>
+
+    <p>すでに多くの方に申し込みいただき、残り枠はあとわずかとなっております。</p>
+
+    <p>受講するかどうかであなたの未来が大きく変わります。</p>
+
+    <h2>【講師プロフィール】</h2>
+
+    <div class="profile">
+
+        <img src="./img/icon.jpg" alt="アイコン画像">
+
+        <p>
+            国内外のマーケットに精通し、
+            これまで複数の資産運用プロジェクトに関与してきた実績を持つ。
+            独自の投資理論を体系化し、
+            延べ1,000名以上に対して資産形成のアドバイスを提供。
+            20代で経済的自由を実現し、
+            現在は次世代の投資家育成に注力している。
+            これまで手がけた案件は多岐にわたり、
+            安定した成果を継続的に生み出しているとされている。
+            現在は限られた参加者にのみ、
+            そのノウハウを直接伝える活動を行っている。
+        </p>
+
+    </div>
+
+</div>
     </body>
 </html>
